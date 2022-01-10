@@ -2,7 +2,6 @@ import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 
 export default function test({ isConnected }) {
-  let dat = getPosts();
   return (
     <div className="container">
       <Head>
@@ -13,7 +12,6 @@ export default function test({ isConnected }) {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js with MongoDB!2</a>
         </h1>
-        {dat}
         {isConnected ? (
           <h2 className="subtitle">You are connected to MongoDB</h2>
         ) : (
