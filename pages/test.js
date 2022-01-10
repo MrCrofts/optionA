@@ -11,7 +11,7 @@ export default function test({ isConnected }) {
       </Head>
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!1</a>
+          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!2</a>
         </h1>
         {dat}
         {isConnected ? (
@@ -52,11 +52,7 @@ async function getPosts(req, res) {
     // connect to the database
     let { db } = await clientPromise.db();
     // fetch the posts
-    let posts = await db
-      .collection("sample_airbnb")
-      .find({})
-      .sort({ published: -1 })
-      .toArray();
+    let posts = await db.collection("sample_airbnb").find({}).toArray();
     // return the posts
     return res.json({
       message: JSON.parse(JSON.stringify(posts)),
