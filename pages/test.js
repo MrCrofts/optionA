@@ -9,12 +9,11 @@ export default function test({ isConnected }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {dat}
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
+          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!1</a>
         </h1>
-
+        {dat}
         {isConnected ? (
           <h2 className="subtitle">You are connected to MongoDB</h2>
         ) : (
