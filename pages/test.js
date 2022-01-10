@@ -47,7 +47,7 @@ export async function getServerSideProps(context) {
   }
 }
 */
-async function getPosts(req, res) {
+export async function getPosts(req, res) {
   try {
     // connect to the database
     let { db } = await clientPromise.db();
