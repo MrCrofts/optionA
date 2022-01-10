@@ -27,6 +27,7 @@ export default function test({ isConnected }) {
   );
 }
 
+/*
 export async function getServerSideProps(context) {
   try {
     // client.db() will be the default database passed in the MONGODB_URI
@@ -45,3 +46,4 @@ export async function getServerSideProps(context) {
     };
   }
 }
+*/
