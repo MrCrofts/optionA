@@ -44,7 +44,7 @@ export async function getServerSideProps(context) {
     };
   }
 }
-*/
+
 async function getPosts(req, res) {
   try {
     // connect to the database
@@ -64,3 +64,4 @@ async function getPosts(req, res) {
     });
   }
 }
+*/
