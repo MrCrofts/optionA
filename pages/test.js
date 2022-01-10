@@ -2,13 +2,14 @@ import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 
 export default function test({ isConnected }) {
+  let dat = getPosts();
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {dat}
       <main>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
@@ -47,7 +48,7 @@ export async function getServerSideProps(context) {
   }
 }
 */
-export async function getPosts(req, res) {
+async function getPosts(req, res) {
   try {
     // connect to the database
     let { db } = await clientPromise.db();
