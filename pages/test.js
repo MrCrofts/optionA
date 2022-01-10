@@ -8,10 +8,12 @@ export default function test({ isConnected }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!2</a>
+          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
         </h1>
+
         {isConnected ? (
           <h2 className="subtitle">You are connected to MongoDB</h2>
         ) : (
@@ -25,7 +27,6 @@ export default function test({ isConnected }) {
   );
 }
 
-/*
 export async function getServerSideProps(context) {
   try {
     // client.db() will be the default database passed in the MONGODB_URI
@@ -44,24 +45,3 @@ export async function getServerSideProps(context) {
     };
   }
 }
-
-async function getPosts(req, res) {
-  try {
-    // connect to the database
-    let { db } = await clientPromise.db();
-    // fetch the posts
-    let posts = await db.collection("sample_airbnb").find({}).toArray();
-    // return the posts
-    return res.json({
-      message: JSON.parse(JSON.stringify(posts)),
-      success: true
-    });
-  } catch (error) {
-    // return the error
-    return res.json({
-      message: new Error(error).message,
-      success: false
-    });
-  }
-}
-*/
