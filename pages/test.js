@@ -5,6 +5,7 @@ import connectToDatabase from "../lib/mongo";
 //const ObjectId = require("mongo").ObjectId;
 
 export default function test({ isConnected, dat }) {
+  dat = "Hi";
   return (
     <div className="container">
       <Head>
