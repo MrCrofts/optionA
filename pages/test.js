@@ -1,7 +1,7 @@
 import Head from "next/head";
 //import clientPromise from "../lib/mongodb";
 //const { connectToDatabase } = require("../lib/mongo");
-//import connectToDatabase from "../lib/mongo";
+import connectToDatabase from "../lib/mongo";
 //const ObjectId = require("mongo").ObjectId;
 
 export default function test({ isConnected, dat }) {
@@ -25,7 +25,7 @@ export default function test({ isConnected, dat }) {
             for instructions.
           </h2>
         )}
-        <h2>Connected: {dat}</h2>
+        <h2>Connected: {connectToDatabase}</h2>
       </main>
     </div>
   );
