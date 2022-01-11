@@ -38,11 +38,7 @@ export async function getServerSideProps(context) {
     var x = await clientPromise
       .collection("listingsAndReviews")
       .findOne({}, function (err, result) {
-        if (err) {
-          x = err;
-        } else {
-          x = "Data found";
-        }
+        return "Data found";
       });
     return {
       props: { isConnected: true, dat: x }
