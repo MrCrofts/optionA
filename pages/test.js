@@ -40,7 +40,7 @@ export async function getServerSideProps(context) {
     // db.find({}) or any of the MongoDB Node Driver commands
 
     let { db } = await connectToDatabase();
-    let x = db.collection("listingsAndReviews").findOne({});
+    let x = await { db }.collection("listingsAndReviews").findOne({});
     //let x = "Yay";
     return {
       props: { isConnected: true, dat: x }
