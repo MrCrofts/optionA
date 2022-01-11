@@ -1,8 +1,7 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
-let x;
 
-export default function test({ isConnected }) {
+export default function test({ isConnected, dat }) {
   return (
     <div className="container">
       <Head>
@@ -23,7 +22,7 @@ export default function test({ isConnected }) {
             for instructions.
           </h2>
         )}
-        <h2>Connected: {{ isConnected }}</h2>
+        <h2>Connected: {dat}</h2>
       </main>
     </div>
   );
@@ -36,7 +35,7 @@ export async function getServerSideProps(context) {
     // const db = client.db("myDatabase");
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
-    x = "Data not found";
+    var x = "Data not found";
     await clientPromise
       .collection("listingsAndReviews")
       .findOne({}, function (err, result) {
@@ -48,7 +47,7 @@ export async function getServerSideProps(context) {
       });
     //await clientPromise;
     return {
-      props: { isConnected: true }
+      props: { isConnected: true, dat: x }
     };
   } catch (e) {
     console.error(e);
