@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
 
     await clientPromise
       .collection("listingsAndReviews")
-      .findOne({}, function (err, result) {
+      .find({}, function (err, result) {
         if (err) {
           x = err;
         } else {
