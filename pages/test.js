@@ -25,7 +25,7 @@ export default function test({ isConnected, dat }) {
             for instructions.
           </h2>
         )}
-        <h2>Connected: {connectToDatabase}</h2>
+        <h2>Connected: {dat}</h2>
       </main>
     </div>
   );
