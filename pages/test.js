@@ -1,9 +1,5 @@
 import Head from "next/head";
-//import clientPromise from "../lib/mongodb";
-import { MongoClient } from "mongodb";
-
-const uri = process.env.MONGODB_URI;
-const options = {};
+import clientPromise from "../lib/mongodb";
 
 export default function test({ isConnected, dat }) {
   return (
@@ -39,10 +35,6 @@ export async function getServerSideProps(context) {
     // const db = client.db("myDatabase");
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
-
-    let client = new MongoClient(uri, options);
-    await client.connect();
-    let clientPromise = client.db("sample_airbnb");
     let x = await clientPromise.collection("listingsAndReviews").findOne({});
     return {
       props: { isConnected: true, dat: x }
