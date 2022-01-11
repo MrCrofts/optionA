@@ -43,7 +43,7 @@ export async function getServerSideProps(context) {
     let x = await db.collection("listingsAndReviews").findOne({});
     //x = "Yay";
     return {
-      props: { isConnected: true, dat: JSON.parse(JSON.stringify(x)) }
+      props: { isConnected: true, dat: JSON.parse(JSON.stringify(x.summary)) }
     };
   } catch (e) {
     console.error(e);
