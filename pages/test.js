@@ -1,6 +1,7 @@
 import Head from "next/head";
 //import clientPromise from "../lib/mongodb";
-const { connectToDatabase } = require("../lib/mongo");
+//const { connectToDatabase } = require("../lib/mongo");
+import connectToDatabase from "../lib/mongo";
 //const ObjectId = require("mongo").ObjectId;
 
 export default function test({ isConnected, dat }) {
