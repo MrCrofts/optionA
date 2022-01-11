@@ -50,6 +50,7 @@ export async function getServerSideProps(context) {
     // const db = client.db("myDatabase");
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
+    /*
     await clientPromise
       .collection("listingsAndReviews")
       .findOne({}, function (err, result) {
@@ -58,7 +59,8 @@ export async function getServerSideProps(context) {
         } else {
           x = result.summary;
         }
-      });
+      });*/
+    var db = await clientPromise.db("sample_airbnb");
     return {
       props: { isConnected: true }
     };
