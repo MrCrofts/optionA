@@ -1,5 +1,5 @@
 import Head from "next/head";
-import db from "../lib/mongodb";
+import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
@@ -60,7 +60,7 @@ export async function getServerSideProps(context) {
           x = result.summary;
         }
       });*/
-    await db;
+    await clientPromise;
     return {
       props: { isConnected: true }
     };
