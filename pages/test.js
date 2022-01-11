@@ -1,6 +1,6 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
-var x;
+let x;
 
 export default function test({ isConnected }) {
   return (
