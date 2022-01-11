@@ -2,7 +2,7 @@ import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
-function getData() {
+async function getData() {
   return "Async function";
 }
 
