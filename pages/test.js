@@ -1,6 +1,6 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
-var x = "Data not retrieved";
+var x;
 
 export default function test({ isConnected }) {
   return (
@@ -36,10 +36,10 @@ export async function getServerSideProps(context) {
     // const db = client.db("myDatabase");
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
-
+    x = "Data not found";
     await clientPromise
       .collection("listingsAndReviews")
-      .find({}, function (err, result) {
+      .findOne({}, function (err, result) {
         if (err) {
           x = err;
         } else {
