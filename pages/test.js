@@ -40,6 +40,7 @@ export async function getServerSideProps(context) {
     /*
     let { db } = await connectToDatabase();
     let x = await db.collection("listingsAndReviews").findOne({}); */
+    let x = "Yay";
     return {
       props: { isConnected: true, dat: x }
     };
