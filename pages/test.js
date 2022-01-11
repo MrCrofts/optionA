@@ -23,6 +23,15 @@ export default function test({ isConnected }) {
             for instructions.
           </h2>
         )}
+        {
+        clientPromise.db("sample_airbnb");
+        clientPromise
+          .collection("listingsAndReviews")
+          .findOne({}, function (err, result) {
+            if (err) throw err;
+            x = result.summary;
+          });
+        }
         <h2>{x}</h2>
       </main>
     </div>
