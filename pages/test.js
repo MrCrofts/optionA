@@ -1,5 +1,5 @@
 import Head from "next/head";
-import clientPromise from "../lib/mongodb";
+import db from "../lib/mongodb";
 var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
