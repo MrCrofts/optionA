@@ -23,7 +23,7 @@ export default function test({ isConnected }) {
             for instructions.
           </h2>
         )}
-        <h2>Connected: {isConnected}</h2>
+        <h2>Connected: {{ isConnected }}</h2>
       </main>
     </div>
   );
