@@ -23,7 +23,7 @@ export default function test({ isConnected }) {
             for instructions.
           </h2>
         )}
-        <h2>{x}</h2>
+        <h2>{isConnected}</h2>
       </main>
     </div>
   );
@@ -48,7 +48,7 @@ export async function getServerSideProps(context) {
       });
     //await clientPromise;
     return {
-      props: { isConnected: true, x }
+      props: { isConnected: true }
     };
   } catch (e) {
     console.error(e);
