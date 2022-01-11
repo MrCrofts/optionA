@@ -45,7 +45,7 @@ export async function getServerSideProps(context) {
           x = "Data found";
         }
       });
-    //await clientPromise;
+    await clientPromise;
     return {
       props: { isConnected: true, dat: x }
     };
