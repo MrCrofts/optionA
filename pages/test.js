@@ -5,9 +5,6 @@ import connectToDatabase from "../lib/mongo";
 //const ObjectId = require("mongo").ObjectId;
 
 export default function test({ isConnected, dat }) {
-  /*let { db } = await connectToDatabase();
-  let x = await db.collection("listingsAndReviews").findOne({});
-  dat = JSON.parse(JSON.stringify(x.summary)); */
   return (
     <div className="container">
       <Head>
