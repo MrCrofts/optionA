@@ -8,7 +8,7 @@ async function getData() {
 
 export default function test({ isConnected }) {
   try {
-    x = getData();
+    x = x;
   } catch (error) {
     x = error;
   }
