@@ -3,7 +3,7 @@ import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
-  let db = clientPromise.db("sample_airbnb");
+  //let db = clientPromise.db("sample_airbnb");
   /*
   clientPromise
     .collection("listingsAndReviews")
