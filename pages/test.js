@@ -2,13 +2,9 @@ import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
-async function getData() {
-  return "Async function";
-}
-
 export default function test({ isConnected }) {
   try {
-    x = getData();
+    x = x;
   } catch (error) {
     x = error;
   }
