@@ -3,10 +3,13 @@ import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
-  clientPromise.collection("customers").findOne({}, function (err, result) {
-    if (err) throw err;
-    x = result.summary;
-  });
+  clientPromise.db("sample_airbnb");
+  clientPromise
+    .collection("listingsAndReviews")
+    .findOne({}, function (err, result) {
+      if (err) throw err;
+      x = result.summary;
+    });
   return (
     <div className="container">
       <Head>
