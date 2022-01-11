@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
         if (err) {
           x = err;
         } else {
-          x = result.summary;
+          x = "Data found";
         }
       });
     //await clientPromise;
