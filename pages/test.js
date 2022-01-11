@@ -4,7 +4,10 @@ var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
   try {
-    x = clientPromise;
+    const getData = async (postId) => {
+      await clientPromise;
+      x = clientPromise;
+    };
   } catch (error) {
     x = error;
   }
