@@ -1,7 +1,12 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
+var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
+  clientPromise.collection("customers").findOne({}, function (err, result) {
+    if (err) throw err;
+    x = result.summary;
+  });
   return (
     <div className="container">
       <Head>
@@ -22,12 +27,12 @@ export default function test({ isConnected }) {
             for instructions.
           </h2>
         )}
+        <h2>{x}</h2>
       </main>
     </div>
   );
 }
 
-/*
 export async function getServerSideProps(context) {
   try {
     // client.db() will be the default database passed in the MONGODB_URI
@@ -46,4 +51,3 @@ export async function getServerSideProps(context) {
     };
   }
 }
-*/
