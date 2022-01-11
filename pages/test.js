@@ -60,7 +60,7 @@ export async function getServerSideProps(context) {
           x = result.summary;
         }
       });*/
-    var db = await clientPromise.db("sample_airbnb");
+    await db;
     return {
       props: { isConnected: true }
     };
