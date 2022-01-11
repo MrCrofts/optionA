@@ -41,9 +41,8 @@ export async function getServerSideProps(context) {
       .findOne({}, function (err, result) {
         return "Data found";
       });
-    if (x === "") {
-      x = "Data not found";
-    }
+
+    x = "Data not found";
     return {
       props: { isConnected: true, dat: x }
     };
