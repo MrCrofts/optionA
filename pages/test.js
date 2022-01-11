@@ -4,7 +4,7 @@ var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
   try {
-    x = "Hello";
+    x = clientPromise;
   } catch (error) {
     x = error;
   }
