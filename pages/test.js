@@ -3,6 +3,14 @@ import clientPromise from "../lib/mongodb";
 var x = "Data not retrieved";
 
 export default function test({ isConnected }) {
+  let db = clientPromise.db("sample_airbnb");
+  /*
+  clientPromise
+    .collection("listingsAndReviews")
+    .findOne({}, function (err, result) {
+      if (err) throw err;
+      x = result.summary;
+    }); */
   return (
     <div className="container">
       <Head>
@@ -22,15 +30,6 @@ export default function test({ isConnected }) {
             You are NOT connected to MongoDB. Check the <code>README.md</code>{" "}
             for instructions.
           </h2>
-        )}
-        {(
-        clientPromise.db("sample_airbnb");
-        clientPromise
-          .collection("listingsAndReviews")
-          .findOne({}, function (err, result) {
-            if (err) throw err;
-            x = result.summary;
-          });
         )}
         <h2>{x}</h2>
       </main>
