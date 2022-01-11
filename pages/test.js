@@ -5,13 +5,12 @@ var x = "Data not retrieved";
 export default function test({ isConnected }) {
   x = "Hello";
   //let db = clientPromise.db("sample_airbnb");
-  /*
   clientPromise
     .collection("listingsAndReviews")
     .findOne({}, function (err, result) {
       if (err) throw err;
       x = result.summary;
-    }); */
+    });
   return (
     <div className="container">
       <Head>
